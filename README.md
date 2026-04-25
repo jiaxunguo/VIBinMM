@@ -22,6 +22,43 @@ python -m venv vibinmm_env
 source vibinmm_env/bin/activate
 ```
 
+## 📂 Datasets
+
+### Synthetic Data
+
+The synthetic dataset is provided in:
+
+```python
+with open('data/syntheticdata.pkl', 'rb') as f:
+    syntheticdata = pickle.load(f)
+
+X = syntheticdata['X']
+labels = syntheticdata['y']
+```
+
+### Real-World Data
+
+The real-world experiments use two datasets that require permission or manual download from the official sources:
+
+* **Earthquake Data**
+  Source: https://www.geonet.org.nz/
+
+* **Gene Expression Data**
+  Source: https://www.ncbi.nlm.nih.gov/
+
+Due to access restrictions, these datasets are **not included** in this repository.
+Please download the datasets manually and place them under the `data/` directory.
+
+Recommended structure:
+
+```bash
+data/
+├── syntheticdata.pkl
+├── earthquake.pkl
+└── gene_expression.pkl
+```
+
+
 ## 🧪 Reproducing Experiments
 
 ### Option 1: Run the Notebook (Recommended)
